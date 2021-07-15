@@ -15,10 +15,6 @@ export interface WebsiteConfig {
   /**
    * full url, no username
    */
-  facebook?: string;
-  /**
-   * full url, no username
-   */
   twitter?: string;
   /**
    * hide or show all email subscribe boxes
@@ -50,7 +46,7 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: 'Atlas Apps',
-  description: 'Atlas, you finally found the app you\'ve been looing for',
+  description: 'Atlas, the app you\'ve been looking for is here',
   coverImage: 'img/blog-cover.png',
   logo: 'img/atlas-logo.png',
   lang: 'en',
