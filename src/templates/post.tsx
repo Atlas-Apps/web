@@ -146,9 +146,6 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
         {post.frontmatter.tags && (
           <meta property="article:tag" content={post.frontmatter.tags[0]} />
         )}
-
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-        {config.facebook && <meta property="article:author" content={config.facebook} />}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta name="twitter:description" content={post.frontmatter.excerpt || post.excerpt} />
@@ -444,7 +441,7 @@ const PostFullImage = styled.figure`
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/atlas-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed

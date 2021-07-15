@@ -1,8 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-
 import { css } from '@emotion/react';
-
+import Img, { FluidObject } from 'gatsby-image';
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
 import { PostFullContent } from '../components/PostContent';
@@ -34,74 +34,88 @@ const PageTemplate = css`
   }
 `;
 
-const About: React.FC = () => (
-  <IndexLayout>
-    <Helmet>
-      <title>About</title>
-    </Helmet>
-    <Wrapper css={PageTemplate}>
-      <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
-        <div css={[outer, SiteNavMain]}>
-          <div css={inner}>
-            <SiteNav isHome={false} />
-          </div>
-        </div>
-      </header>
-      <main id="site-main" className="site-main" css={[SiteMain, outer]}>
-        <div css={inner}>
-          <article className="post page" css={[PostFull, NoImage]}>
-            <PostFullHeader className="post-full-header">
-              <PostFullTitle className="post-full-title">About</PostFullTitle>
-            </PostFullHeader>
+export interface AboutProps {
+  data: {
+    logo: {
+      childImageSharp: {
+        fluid: FluidObject;
+      };
+    }
+  }
+}
 
-            <PostFullContent className="post-full-content">
-              <div className="post-content">
-                <h5>
-                  A starter template for Gatsby <br /> GitHub: <a href="https://github.com/scttcper/gatsby-casper">scttcper/gatsby-casper</a>
-                </h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus leo,
-                  non tempus magna vehicula ac. Maecenas mollis ante finibus pharetra imperdiet.
-                  Maecenas in aliquam purus. Nam et massa a nulla fermentum dapibus sit amet in
-                  neque. Ut ipsum ipsum, rhoncus a sodales pellentesque, interdum a elit. Nullam
-                  aliquam tellus nibh, eget laoreet dui aliquet non. Vestibulum malesuada ante at
-                  diam tempus, ac interdum risus scelerisque. Sed ipsum neque, vulputate porta diam
-                  eget, consequat blandit nulla. Integer volutpat velit vitae purus lacinia aliquam.
-                  Integer bibendum ipsum vitae magna pulvinar, nec vehicula dolor vulputate. Nulla
-                  eu massa id orci placerat finibus vel sit amet eros. Vestibulum quis consequat
-                  massa. Sed sagittis sollicitudin massa at commodo. Praesent diam nisi, imperdiet
-                  posuere eleifend nec, blandit ac massa.
-                </p>
-                <p>
-                  Vestibulum semper pretium ipsum nec congue. Ut ac eros nisi. Donec leo sem,
-                  aliquam mollis sapien ultrices, dapibus congue diam. Proin viverra dapibus
-                  blandit. Ut mauris tellus, tristique id felis vel, venenatis vestibulum nunc. Nam
-                  molestie pulvinar nibh, eget egestas augue. Maecenas tellus arcu, mattis ut ipsum
-                  non, sollicitudin convallis nunc. Donec nec neque tristique, aliquet lacus id,
-                  laoreet nunc. Cras dapibus nisi nulla, ullamcorper faucibus neque suscipit ac.
-                  Donec eget orci venenatis justo lobortis volutpat. Proin vel placerat nisl.
-                  Integer arcu nunc, sodales eu fringilla non, aliquam non diam. Cras placerat,
-                  massa et faucibus pretium, ante elit tincidunt tellus, tristique ultricies velit
-                  quam et massa.
-                </p>
-                <p>
-                  In nunc lacus, dapibus vitae lacus sit amet, efficitur iaculis neque. Suspendisse
-                  ut tellus quis leo vestibulum tincidunt. Aenean nec enim ac dolor lacinia semper.
-                  Ut sed laoreet libero. Nunc elementum sollicitudin accumsan. Nunc eu augue neque.
-                  Proin a tortor nibh. Cras eu nisl ornare sapien feugiat pellentesque. Mauris
-                  dignissim vel quam eu pellentesque. Integer sit amet posuere quam, eu ullamcorper
-                  odio. Nullam a lacus tempus sapien dignissim ullamcorper. In hac habitasse platea
-                  dictumst. Proin quis massa aliquam, feugiat tortor sit amet, tincidunt urna. Donec
-                  posuere pulvinar lectus, ac semper ipsum vulputate quis.
-                </p>
-              </div>
-            </PostFullContent>
-          </article>
-        </div>
-      </main>
-      <Footer />
-    </Wrapper>
-  </IndexLayout>
-);
+const About: React.FC<AboutProps> = props => {
+  return (
+    <IndexLayout>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
+      <Wrapper css={PageTemplate}>
+        <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
+          <div css={[outer, SiteNavMain]}>
+            <div css={inner}>
+              <SiteNav isHome={false} />
+            </div>
+          </div>
+        </header>
+        <main id="site-main" className="site-main" css={[SiteMain, outer]}>
+          <div css={inner}>
+            <article className="post page" css={[PostFull, NoImage]}>
+              <PostFullHeader className="post-full-header">
+                <PostFullTitle className="post-full-title">About</PostFullTitle>
+                <Img
+                  alt={`group photo with Austin and others`}
+                  style={{ height: '100%' }}
+                  fluid={ props.data.logo.childImageSharp.fluid }
+                />
+              </PostFullHeader>
+
+              <PostFullContent className="post-full-content">
+                
+                <div className="post-content">
+                  <p>
+                    I started Atlas Apps in late summer 2021. I had a couple ideas for some new
+                    apps that I was really excited for. Most notibly, I was really excited about
+                    releasing Speed Blackjack on the App Store. Online gambling and sports betting
+                    had just been leagalized in Michigan earlier in the year. I wasn't happy with
+                    the existing Blackjack learning and practice apps, so I decided to create my own.
+                    I was excited to publish to the App Store under my name and quickly hit a block.
+                    Apple restricts simulated gambling app from being released by individual 
+                    developers--hence the founding of Atlas Apps.
+                  </p>
+                  <p>
+                    As of writing this, I'm unsure how this will go. I'm relatively new to the
+                    indie/entrepreneurship game, but at the very least, I'm hoping to learn a thing
+                    or two. I hope you enjoy our apps. Please let me know if you have ideas for improvement.
+                  </p>
+                  <p>
+                    Austin Evans
+                    <br/>
+                    Founder
+                  </p>
+                </div>
+              </PostFullContent>
+            </article>
+          </div>
+        </main>
+        <Footer />
+      </Wrapper>
+    </IndexLayout>
+  )
+}
+
+export const pageQuery = graphql`
+  query aboutPageQuery {
+    logo: file(relativePath: { eq: "img/group-pic.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 3720) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default About;

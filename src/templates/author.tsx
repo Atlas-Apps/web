@@ -45,7 +45,6 @@ interface AuthorTemplateProps {
       id: string;
       website?: string;
       twitter?: string;
-      facebook?: string;
       location?: string;
       profile_image?: {
         childImageSharp: {
@@ -93,8 +92,6 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={`${author.id} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + location.pathname} />
-        <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-        <meta property="article:author" content="https://www.facebook.com/ghost" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + location.pathname} />
@@ -168,17 +165,6 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
-                    {author.facebook && (
-                      <AuthorSocialLink className="author-social-link">
-                        <AuthorSocialLinkAnchor
-                          href={`https://www.facebook.com/${author.facebook}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Facebook
-                        </AuthorSocialLinkAnchor>
-                      </AuthorSocialLink>
-                    )}
                   </div>
                 </AuthHeaderContent>
               </SiteHeaderContent>
@@ -206,8 +192,7 @@ export const pageQuery = graphql`
       id
       website
       twitter
-      bio
-      facebook
+      bio      
       location
       profile_image {
         childImageSharp {

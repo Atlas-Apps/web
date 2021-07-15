@@ -16,28 +16,21 @@ export const Footer: React.FC = () => {
           <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
           {config.footer && (
             <Link to="/">
-              | {config.title} {config.footer}
+              | {config.footer}
             </Link>
           )}
         </section>
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
-          {config.facebook && (
-            <a href={config.facebook} target="_blank" rel="noopener noreferrer">
-              Facebook
-            </a>
-          )}
           {config.twitter && (
             <a href={config.twitter} target="_blank" rel="noopener noreferrer">
               Twitter
             </a>
           )}
 
-          <a href="https://github.com/scttcper/gatsby-casper" target="_blank" rel="noopener noreferrer">
-            Casper
+          <a href="https://github.com/atlas-apps" target="_blank" rel="noopener noreferrer">
+            GitHub
           </a>
-
-          <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>
     </footer>

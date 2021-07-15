@@ -68,7 +68,6 @@ const IndexPage: React.FC<IndexProps> = props => {
           property="og:image"
           content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
         />
-        {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         {config.googleSiteVerification && (
           <meta name="google-site-verification" content={config.googleSiteVerification} />
         )}
@@ -145,7 +144,7 @@ const IndexPage: React.FC<IndexProps> = props => {
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/atlas-logo.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.

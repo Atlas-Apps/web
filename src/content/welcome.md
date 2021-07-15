@@ -1,26 +1,22 @@
 ---
 layout: post
-title: 'Welcome to Ghost'
-author: [Ghost]
+title: 'Welcome to Atlas Apps'
+author: [Austin Evans]
 tags: ['Getting Started']
 image: img/welcome-to-ghost.jpg
-date: '2018-05-06T23:46:37.121Z'
+date: '2021-07-14T23:46:37.121Z'
 draft: false
-excerpt: Welcome, it's great to have you here. We know that first impressions are important, so we've populated your new site with some initial getting started posts that will help you get familiar with everything in no time.
+excerpt: Welcome, thanks for stopping by. Atlas Apps is just getting started and the future is bright. Feel free to take a look around and see what apps we have available and what's making waves in the pipeline.
 ---
 
-**A few things you should know upfront**:
+## Game Plan
 
-1. Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That's who it works best for.
-2. The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.
-3. For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.
+> Here's the pipeline. I'm working hard to get these apps out as quickly as possible without compromising quality.
 
-Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our Ghost(Pro) service, and every penny we make is re-invested into funding further development of free, open source technology for modern publishing.
+1. **Speed Blackjack** is the highest priority and hopefully the most useful. Online gambling is on the rise. In 2019, the global online gambling market size was $57.9 billion and is on track to grow at a compound annual growth rate of 11.5% from 2020-2017 [1]. Casino games, like blackjack, make up a significant portion of the industry. **Speed Blackjack** fills the needs for a solid combination between fun and learning. Through practice, **Speed Blackjack** players can learn basic strategy, common player mistakes, and have a little fun before risking a dime with the heavy hitters.
+    
+    <br/>As the name implies, **Speed Blackjack** does away with the slow animations and gimics of competing blackjack apps helping you learn more, quicker. **Speed Blackjack** is almost ready for release. Stay tunned.
 
-The version of Ghost you are looking at right now would not have been made possible without generous contributions from the open source community.
+2. **Color Wheel** is an app made for artists and color enthusiast. Quickly find complementary color with this simple, easy to use color wheel. Save your favorite colors for later. Coming soon.
 
-## Next up, the editor
-
-The main thing you'll want to read about next is probably: the Ghost editor. This is where the good stuff happens.
-
-> By the way, once you're done reading, you can simply delete the default **Ghost** user from your team to remove all of these introductory posts!
+[1]: [Online Gambling Market Size, Share & Trends Analysis Report By Type (Sports Betting, Casinos, Poker, Bingo), By Device (Desktop, Mobile), By Region (North America, Europe, APAC, Latin America, MEA), And Segment Forecasts, 2020 - 2027](https://www.grandviewresearch.com/industry-analysis/online-gambling-market)
