@@ -9,6 +9,7 @@ import { colors } from '../../styles/colors';
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
 import { Twitter } from '../icons/twitter';
+import { LinkedIn } from '../icons/linkedin';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -113,6 +114,17 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   rel="noopener noreferrer"
                 >
                   <Twitter />
+                </a>
+              )}
+              {config.linkedin && (
+                <a
+                  css={SocialLink}
+                  href={config.linkedin}
+                  title="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn />
                 </a>
               )}
             </SocialLinks>

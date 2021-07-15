@@ -17,6 +17,10 @@ export interface WebsiteConfig {
    */
   twitter?: string;
   /**
+   * full url, no username
+   */
+  linkedin?: string;
+  /**
    * hide or show all email subscribe boxes
    */
   showSubscribe: boolean;
@@ -52,6 +56,7 @@ const config: WebsiteConfig = {
   lang: 'en',
   siteUrl: 'https://atlasapps.us',
   twitter: 'https://twitter.com/atlasappsus',
+  linkedin: 'https://linkedin.com/company/atlas-apps-us',
   showSubscribe: false,
   googleSiteVerification: 'GoogleCode',
   footer: 'Mobile Applications',

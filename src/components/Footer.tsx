@@ -21,7 +21,6 @@ export const Footer: React.FC = () => {
           )}
         </section>
         <SiteFooterNav>
-          <Link to="/">Latest Posts</Link>
           {config.twitter && (
             <a href={config.twitter} target="_blank" rel="noopener noreferrer">
               Twitter
@@ -31,6 +30,12 @@ export const Footer: React.FC = () => {
           <a href="https://github.com/atlas-apps" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
+
+          <a href="https://linkedin.com/company/atlas-apps-us" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+
+          <Link to="/privatepolicy">Private Policy</Link>
         </SiteFooterNav>
       </div>
     </footer>

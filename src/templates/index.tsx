@@ -164,7 +164,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
+      filter: { frontmatter: { draft: { ne: true }, tags: {ne: "Legal"} } }
       limit: $limit
       skip: $skip
     ) {
