@@ -1,11 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { css } from '@emotion/react';
-import Img, { FluidObject } from 'gatsby-image';
+import { FluidObject } from 'gatsby-image';
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import { PostFullContent } from '../components/PostContent';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -13,10 +11,8 @@ import {
   outer,
   SiteArchiveHeader,
   SiteHeader,
-  SiteMain,
   SiteNavMain,
 } from '../styles/shared';
-import { NoImage, PostFull, PostFullHeader, PostFullTitle } from '../templates/post';
 
 const PageTemplate = css`
   .site-main {
@@ -116,7 +112,7 @@ const RTKPrivatePolicy: React.FC<AboutProps> = props => {
         <main id="site-main" className="site-main">
           <div>
             <article className="post page">
-              <div style={{"background": "white", "padding": "2em"}} className="post-content" dangerouslySetInnerHTML={{ __html: Termly }} />
+              <div style={{"background": "white", "padding": "2em", "maxWidth": "900px", "margin": "0 auto"}} className="post-content" dangerouslySetInnerHTML={{ __html: Termly }} />
             </article>
           </div>
         </main>
