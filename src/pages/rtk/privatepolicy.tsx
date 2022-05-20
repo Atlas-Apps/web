@@ -2,17 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { css } from '@emotion/react';
 import { FluidObject } from 'gatsby-image';
-import { Footer } from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import { Wrapper } from '../components/Wrapper';
-import IndexLayout from '../layouts';
+import { Footer } from '../../components/Footer';
+import SiteNav from '../../components/header/SiteNav';
+import { Wrapper } from '../../components/Wrapper';
+import IndexLayout from '../../layouts';
 import {
   inner,
   outer,
   SiteArchiveHeader,
   SiteHeader,
   SiteNavMain,
-} from '../styles/shared';
+} from '../../styles/shared';
 
 const PageTemplate = css`
   .site-main {
@@ -85,17 +85,7 @@ word-break: break-word !important;
       </div>
 `;
 
-export interface AboutProps {
-  data: {
-    logo: {
-      childImageSharp: {
-        fluid: FluidObject;
-      };
-    }
-  }
-}
-
-const RTKPrivatePolicy: React.FC<AboutProps> = props => {
+const RTKPrivatePolicy: React.FC = () => {
   return (
     <IndexLayout>
       <Helmet>
