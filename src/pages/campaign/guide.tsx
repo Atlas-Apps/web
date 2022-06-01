@@ -49,7 +49,7 @@ const Instructions: React.FC<InstructionsProps> = props => {
   return (
     <IndexLayout>
       <Helmet>
-        <title>RTK Guide</title>
+        <title>Campaign Guide</title>
       </Helmet>
       <Wrapper css={PageTemplate}>
         <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
@@ -63,7 +63,7 @@ const Instructions: React.FC<InstructionsProps> = props => {
           <div css={inner}>
             <article className="post page" css={[PostFull, NoImage]}>
               <PostFullHeader className="post-full-header">
-                <PostFullTitle className="post-full-title">RTK Guide</PostFullTitle>
+                <PostFullTitle className="post-full-title">Campaign Guide</PostFullTitle>
                 <Img
                   alt={`kid shooting Nerf gun`}
                   style={{ height: '100%' }}
@@ -73,10 +73,10 @@ const Instructions: React.FC<InstructionsProps> = props => {
 
               <PostFullContent className="post-full-content">
                 <div className="post-content">
-                    <p>Thanks for checking out Reason to Kill. Gather up your friends and get ready to have hours of fun. RTK is best played with toy dart guns, like Nerf blasters. Don't have enough? That's ok, you can start by playing with swords, throwable objects like balls, or simply play like tag.</p>
+                    <p>Thanks for checking out Campaign. Gather up your friends and get ready to have hours of fun. Campaign is best played with toy dart guns, like Nerf blasters. Don't have enough? That's ok, you can start by playing with swords, throwable objects like balls, or simply play like tag.</p>
                     <p>Ready to play? Let's jump right in.</p>
                     <h2>Roles</h2>
-                    <p>An RTK round begins by assigning each player a role. Roles marked <FaProductHunt/> are exclusive to RTK Pro.</p>
+                    <p>A Campaign round begins by assigning each player a role. Roles marked <FaProductHunt/> are exclusive to Campaign Pro.</p>
                     
                     {/* Killer */}
                     <h3>The Killer ☠️</h3>
@@ -110,7 +110,7 @@ const Instructions: React.FC<InstructionsProps> = props => {
             
                     <h2>Starting a Round</h2>
                     <p>After all players have been assigned their role and confirm, the countdown will begin. If possible, quickly turn off the lights. You have 10 seconds to hide.</p>
-                    <p>Pro-Tip: With RTK Plus, you can connect your smart home lights through HomeKit to automatically manage the lights throughout the rounds.</p>
+                    <p>Pro-Tip: With Campaign Pro, you can connect your smart home lights through HomeKit to automatically manage the lights throughout the rounds.</p>
                 </div>
                 
               </PostFullContent>
